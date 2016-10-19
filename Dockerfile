@@ -1,10 +1,11 @@
-FROM ubuntu:14.04
-MAINTAINER docrystal.org <info@docrystal.org>
+FROM blitznote/debootstrap-amd64:16.04
 
-ENV LLVM_VERSION 3.6
+MAINTAINER Andy Nicholson <andrew@anicholson.net>
+
+ENV LLVM_VERSION 3.8
 ENV CRYSTAL_VERSION master
-ENV SOURCE_CRYSTAL_VERSION 0.10.0
-ENV SHARDS_VERSION 0.5.4
+ENV SOURCE_CRYSTAL_VERSION 0.19.4
+ENV SHARDS_VERSION 0.6.3
 
 RUN apt-get update && \
       apt-get install -y \
